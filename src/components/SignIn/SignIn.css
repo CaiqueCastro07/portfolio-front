@@ -1,0 +1,155 @@
+.signin {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin-left: auto;
+  display: grid;
+  grid-auto-flow: row;
+  justify-content: center;
+  margin-right: auto;
+  margin-top: auto;
+  margin-bottom: auto;
+  background: white;
+  width: 800px;
+  height: 600px;
+  z-index: 30
+}
+
+.signin__wrapper {
+  width: 100%;
+  height: 100%;
+}
+
+.signin-header {
+  display: grid;
+  margin-top: 5%;
+  grid-auto-flow: column;
+  align-items: center;
+  justify-content: center
+}
+
+.signin-text {
+  height: 150px;
+}
+
+.unfocus-background {
+  width: 100%;
+  height: 400vh;
+  background: rgb(0, 0, 0, 0.8);
+  position: absolute;
+  z-index: 29
+}
+
+.signin-green-btn {
+  font-family: 'Poppins', sans-serif;
+  margin-top: 10%;
+  height: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  background: #4fd66f;
+  width: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.register-grey-btn {
+  font-family: 'Poppins', sans-serif;
+  margin-top: 10%;
+  height: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  background: grey;
+  width: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.signin-inputs {
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto
+}
+
+.each-input {
+  margin-top: 10px;
+}
+
+label {
+  margin-bottom: 5px;
+}
+
+.btn-sign-wrapper {
+  display: grid;
+  grid-auto-flow: column;
+  width: max-content;
+  gap: 2px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.user {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+}
+
+.password {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+}
+
+.close-btn {
+  top: 10px;
+  position: absolute;
+  right: 10px;
+  cursor: pointer;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+}
+
+/* Para 1920x1080 */
+@media screen and (min-width: 1700px) {
+
+  .unfocus-background {
+    height:305vh
+   }
+}
+
+/* Para mobile */
+@media screen and (max-width: 450px) {
+
+  .signin {
+    width: 400px;
+    height: 400px;
+  }
+
+  .signin-animation {
+    width: 150px;
+    height: auto
+  }
+
+  .signin-text {
+    width: 200px;
+    height: auto
+  }
+
+  .signin-inputs{
+  }
+  .each-input{
+    margin-left:-35%;
+  }
+
+  .unfocus-background {
+   height:545vh
+  }
+
+}

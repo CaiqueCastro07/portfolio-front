@@ -1,0 +1,52 @@
+.black {
+  margin: 175px 0 50px 0;
+  padding: 40px 0;
+  background-color: rgb(0, 0, 0);
+  transform: rotate(-3deg);
+  border-top-right-radius: 100px;
+  height: 140px;
+  width: 140%;
+  margin-left: -20%;
+
+}
+
+.to-do-list-blackbar {
+  height: 56px;
+  width: 250px;
+}
+
+.black__text {
+  text-align: center;
+  color: white;
+  margin-top: 20px;
+  font-size: 20px;
+}
+
+.black__wrapper {
+  display: grid;
+  place-items: center;
+  max-width: 500px;
+  margin: 0 auto 0 auto;
+  transform: rotate(3deg)
+}
+
+.cards {
+  margin: 20px 0 50px 0;
+}
+
+/* Para 1920x1080 */
+@media screen and (min-width: 1700px) {
+
+}
+
+/* Para mobile */
+@media screen and (max-width: 550px) {
+  .black__wrapper{
+    max-width:300px;
+  }
+  .black{
+    margin-bottom:20%;
+    height:180px;
+  }
+  
+}
