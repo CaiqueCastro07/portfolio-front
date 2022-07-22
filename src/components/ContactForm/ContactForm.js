@@ -14,20 +14,20 @@ function ContactForm() {
                             </div>
                             <img src={require("../../assets/get-in-touch.png")} alt="" className="get-in-touch" />
 
-                            <form action="#">
+                            <form  className="contact-subform" action="#">
                                 <div className="form-div">
 
                                     <div className="input-box">
                                         <span className="details">Your Name</span>
-                                        <input className="input-field" type="text" placeholder="type your name here..." />
+                                        <input className="input-field input-mobile" type="text" placeholder="type your name here..." />
                                     </div>
                                     <div className="input-box">
                                         <span className="details">Email*</span>
-                                        <input className="input-field" type="text" placeholder="example@example.com" />
+                                        <input className="input-field input-mobile" type="text" placeholder="example@example.com" />
                                     </div>
                                     <div className="input-box">
                                         <span className="details">Telephone*</span>
-                                        <input className="input-field" type="tel" placeholder="your telephone here..." />
+                                        <input className="input-field input-mobile" type="tel" placeholder="your telephone here..." />
                                     </div>
                                     <div className="input-box">
                                         <span className="details">Message</span>
