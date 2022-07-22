@@ -8,7 +8,7 @@
 .card__left {
   border-top-style: inset;
   border-width: 25px;
-  border-color:#f7bc86;
+  border-color: #f7bc86;
   background: white;
   box-shadow: 10px 15px 15px 10px rgba(0, 0, 0, 0.06);
 }
@@ -16,7 +16,7 @@
 .card__right {
   border-top-style: inset;
   border-width: 25px;
-  border-color:#6eff7f;
+  border-color: #6eff7f;
   background: white;
   box-shadow: 10px 15px 15px 10px rgba(0, 0, 0, 0.06);
 }
@@ -24,14 +24,14 @@
 .card {
   z-index: 2;
   padding: 20px 35px;
-  height:max-content;
+  height: max-content;
 }
 
 .task__wrapper {
-  display:grid;
+  display: grid;
   grid-auto-flow: column;
   grid-template-columns: 30px 70% 10%;
-  gap:20px;
+  gap: 20px;
   align-items: center;
   margin-left: auto;
   margin-right: auto;
@@ -39,113 +39,128 @@
   width: 100%;
   min-height: 40px;
 }
-.add-task-wrapper{
-  display:grid;
+
+.add-task-wrapper {
+  display: grid;
   grid-auto-flow: column;
   grid-template-columns: 30px 70% 10%;
-  gap:20px;
+  gap: 20px;
   align-items: center;
   margin-top: 15px;
   width: 100%;
   min-height: 40px;
   align-items: center;
 }
-.new-task{
-  border-color:rgb(255, 215, 142);
-  border-style:solid;
-  height:30px;
-  font-size:15px;
+
+.new-task {
+  border-color: rgb(255, 215, 142);
+  border-style: solid;
+  height: 30px;
+  font-size: 15px;
 }
-.add-task-btn{
-  cursor:pointer;
-  font-size:12px;
-  color:grey;
+
+.add-task-btn {
+  cursor: pointer;
+  font-size: 12px;
+  color: grey;
   font-weight: 500;
 }
-.task__wrapper:hover{
+
+.task__wrapper:hover {
   background-color: rgb(246, 246, 246);
 }
 
-.task-checkbox{
-  height:30px;
-  width:30px;
-  cursor:pointer
+.task-checkbox {
+  height: 30px;
+  width: 30px;
+  cursor: pointer
 }
-.checkbox-img{
-  width:100%;
-  height:100%
+
+.checkbox-img {
+  width: 100%;
+  height: 100%
 }
-.checkbox-img-hidden{
-  position:absolute;
-  display:none;
-  width:30px;
-  height:30px
+
+.checkbox-img-hidden {
+  position: absolute;
+  display: none;
+  width: 30px;
+  height: 30px
 }
-.task-checkbox:hover .checkbox-img-hidden{
-  display:block;
+
+.task-checkbox:hover .checkbox-img-hidden {
+  display: block;
 }
-.delete-task{
-  font-size:12px;
-  color:grey;
+
+.delete-task {
+  font-size: 12px;
+  color: grey;
   font-weight: 500;
-  cursor:pointer;
+  cursor: pointer;
 }
 
 .to-do-title {
- margin-left:auto;
- margin-right:auto;
- font-size:30px;
- font-weight: 400;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 30px;
+  font-weight: 400;
 }
 
-.head__wrapper{
-  display:grid;
+.head__wrapper {
+  display: grid;
   justify-content: center;
   align-items: center;
-  width:auto;
-  height:auto;
-  margin-left:auto;
-  margin-right:auto
+  width: auto;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto
 }
-.subtitle-wrapper{ 
-  margin-top:10px;
-  display:grid;
+
+.subtitle-wrapper {
+  margin-top: 10px;
+  display: grid;
   justify-content: center;
-  width:200px;
+  width: 200px;
 }
-.subtitle-wrapper-done{ 
-  margin-top:10px;
-  display:grid;
+
+.subtitle-wrapper-done {
+  margin-top: 10px;
+  display: grid;
   justify-content: center;
-  width:300px;
+  width: 300px;
 }
-.subtitle-text{
+
+.subtitle-text {
   font-size: 20px;
   font-weight: 300;
   text-align: center;
 }
-.edit-task{
-  display:none;
-  border-style:none;
-  font-size:15px;
-  width:90%;
+
+.edit-task {
+  display: none;
+  border-style: none;
+  font-size: 15px;
+  width: 90%;
 }
 
-.task-text{
-  display:initial
+.task-text {
+  display: initial
 }
-.show{
-  display:initial
+
+.show {
+  display: initial
 }
-.hide{
-  display:none
+
+.hide {
+  display: none
 }
-.eraseall-btn{
-  margin-top:5%;
-  height:65px;
-  width:auto;
-  margin-left:10%;
-  cursor:pointer;
+
+.eraseall-btn {
+  margin-top: 5%;
+  height: 65px;
+  width: auto;
+  margin-left: 10%;
+  cursor: pointer;
 }
 
 /* Para 1920x1080 */
@@ -153,35 +168,57 @@
 
 /* Para mobile */
 @media screen and (max-width: 450px) {
-  .cards__wrapper{
+
+  .cards__wrapper {
     grid-auto-flow: row;
-    grid-template-columns:400px;
-   
+    grid-template-columns: 90%;
+    gap: 10px;
   }
-  .eraseall-btn{
-    margin-left:4%;
+
+  .card {
+    padding: 20px 35px;
+    height: max-content;
   }
-  .card__left{
-    width:80%;
+
+  .add-task-wrapper {
+    margin-left: auto;
+    margin-right: auto;
+    grid-template-columns: 0% 80% 20%;
+    gap: 10px;
   }
-  .card__right{
-    width:80%
+
+  .eraseall-btn {
+    height: 50px;
+    width: auto;
+    margin-right:auto;
+    margin-left:auto
   }
+
+  .task__wrapper {
+    gap: 5px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+
 }
 
 /* para table */
 @media screen and (max-width: 815px) and (min-width:790px) {
-  .cards__wrapper{
+  .cards__wrapper {
     grid-template-columns: 400px 400px;
-   
+
   }
-  .eraseall-btn{
-    margin-left:4%;
+
+  .eraseall-btn {
+    margin-left: 4%;
   }
-  .card__left{
-    width:80%;
+
+  .card__left {
+    width: 80%;
   }
-  .card__right{
-    width:80%
+
+  .card__right {
+    width: 80%
   }
 }

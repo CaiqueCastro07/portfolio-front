@@ -110,7 +110,6 @@ function ToDo(props) {
 
         if (evt?.key == "Enter" && evt?.target?.value) {
 
-
             if (!props?.logged) {
 
                 let idx;
@@ -194,11 +193,12 @@ function ToDo(props) {
 
         if (!props?.logged) {
 
-            [...tasks].find((e, i) => {
+            console.log("fake target",target);
+
+            fakeTasks.find((e, i) => {
                 if (e?._id == target) {
                     const newArr = []
-                    newArr.length = fakeTasks.length
-                    newArr[i] = true;
+                    newArr.push(target)
                     setTaskEditing(newArr)
                     return true
                 }
@@ -206,11 +206,10 @@ function ToDo(props) {
             return
         }
 
-        [...tasks].find((e, i) => {
+        tasks.find((e, i) => {
             if (e?._id == target) {
                 const newArr = []
-                newArr.length = tasks.length
-                newArr[i] = true;
+                newArr.push(target)
                 setTaskEditing(newArr)
                 return true
             }
@@ -226,10 +225,10 @@ function ToDo(props) {
                     <img src={require(`../../assets/${e?.done ? "done-checkbox.png" : "to-do-checkbox.png"}`)} alt="" className="checkbox-img" />
                 </div>
                 <div className="task-text-wrapper">
-                    <input value={editTaskValue} onKeyUp={(evt) => editTask(e?._id, evt)} onChange={(evt) => setEditTaskValue(evt?.target?.value)} className={taskEditing[i] ? "edit-task show" : "edit-task"} />
-                    <p onClick={() => taskControl(e?._id)} className={taskEditing[i] ? "task-text hide" : "task-text"} >{e?.task || ''}</p>
+                    <input value={editTaskValue} onKeyUp={(evt) => editTask(e?._id, evt)} onChange={(evt) => setEditTaskValue(evt?.target?.value)} className={taskEditing.includes(e?._id) ? "edit-task show" : "edit-task"} />
+                    <p onClick={() => taskControl(e?._id)} className={taskEditing.includes(e?._id) ? "task-text hide" : "task-text"} >{e?.task || ''}</p>
                 </div>
-                <div onClick={(evt) => taskControl(e?._id, taskEditing[i] ? "undo" : "delete", evt)} className="delete-task">{taskEditing[i] ? "undo" : "delete"}</div>
+                <div onClick={(evt) => taskControl(e?._id, taskEditing.includes(e?._id) ? "undo" : "delete", evt)} className="delete-task">{taskEditing.includes(e?._id) ? "undo" : "delete"}</div>
             </div>;
 
         return taskDiv
