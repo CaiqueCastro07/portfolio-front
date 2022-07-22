@@ -5,7 +5,7 @@ class ApiController {
     constructor(userid) {
 
         this.api = axios.create({
-            baseURL: "http://localhost:3001/", headers: {
+            baseURL: "http://191.252.195.63:3001/", headers: {
                 Authorization: "Bearer chave777",
                 userid
             }
