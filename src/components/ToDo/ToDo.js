@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
 import { ApiController } from "../../Api/api";
 import { fakeTasks } from "../../data/data";
 import "./ToDo.css"
@@ -10,6 +10,7 @@ function ToDo(props) {
     const [taskEditing, setTaskEditing] = useState([])
     const [newTaskValue, setNewTaskValue] = useState("")
     const [editTaskValue, setEditTaskValue] = useState("")
+    //const input = useRef(null)
 
     const [tasks, setTasks] = useState([])
 
@@ -68,14 +69,12 @@ function ToDo(props) {
 
         if (!props?.logged) {
 
-            if(target === false || target === true){
+            if (target === false || target === true) {
 
-                console.log("target",target)
-
-                const newFakeArr = fakeTasks.filter((e)=>e?.done != target).map((e)=>e)
+                const newFakeArr = fakeTasks.filter((e) => e?.done != target).map((e) => e)
                 fakeTasks.length = 0
 
-                newFakeArr.forEach((e)=>{
+                newFakeArr.forEach((e) => {
                     fakeTasks.push(e)
                 })
 
@@ -193,8 +192,6 @@ function ToDo(props) {
 
         if (!props?.logged) {
 
-            console.log("fake target",target);
-
             fakeTasks.find((e, i) => {
                 if (e?._id == target) {
                     const newArr = []
@@ -225,8 +222,8 @@ function ToDo(props) {
                     <img src={require(`../../assets/${e?.done ? "done-checkbox.png" : "to-do-checkbox.png"}`)} alt="" className="checkbox-img" />
                 </div>
                 <div className="task-text-wrapper">
-                    <input value={editTaskValue} onKeyUp={(evt) => editTask(e?._id, evt)} onChange={(evt) => setEditTaskValue(evt?.target?.value)} className={taskEditing.includes(e?._id) ? "edit-task show" : "edit-task"} />
-                    <p onClick={() => taskControl(e?._id)} className={taskEditing.includes(e?._id) ? "task-text hide" : "task-text"} >{e?.task || ''}</p>
+                    <input onMouseEnter={(evt)=>evt?.target?.focus()} value={editTaskValue} onKeyUp={(evt) => editTask(e?._id, evt)} onChange={(evt) => setEditTaskValue(evt?.target?.value)} className={taskEditing.includes(e?._id) ? "edit-task show" : "edit-task"} />
+                    <p onClick={(evt) => taskControl(e?._id)} className={taskEditing.includes(e?._id) ? "task-text hide" : "task-text"} >{e?.task || ''}</p>
                 </div>
                 <div onClick={(evt) => taskControl(e?._id, taskEditing.includes(e?._id) ? "undo" : "delete", evt)} className="delete-task">{taskEditing.includes(e?._id) ? "undo" : "delete"}</div>
             </div>;
