@@ -100,9 +100,13 @@ class ApiController {
 
 class Authorize {
 
+    //http://191.252.195.63:3001/
+
     constructor() {
         this.api = axios.create({
-            baseURL: "http://191.252.195.63:3001/"
+            baseURL: "http://191.252.195.63:3001/",headers:{
+                Authorization: "Bearer chave777"
+            }
         })
     }
 
