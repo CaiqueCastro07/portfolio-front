@@ -6,7 +6,11 @@ function Footer() {
         <>
             <footer className="footer">
                 <div className="container-footer">
-                    <img src={require("../../assets/contact-footer.png")} alt="" className="contact-footer" />
+                    <div className="footer-contact">
+                       <div className="txt-wrp"><b className="help-text-footer">Need Help?</b></div> 
+                        <div className="txt-wrp"><b className="email-text-footer">coopers@coopers.pro</b></div>
+                        <div className="txt-wrp"><b className="reserve-text-footer">© 2022 Coopers. All rights reserved.</b></div>
+                    </div>
                 </div>
             </footer>
             <div className="green-bar-footer-l"></div>
