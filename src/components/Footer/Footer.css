@@ -58,18 +58,18 @@
 
   .email-text-footer {
     font-weight: 400;
-    font-size: 23px;
+    font-size: 30px;
     color: white
   }
 
   .help-text-footer {
     font-weight: 400;
-    font-size: 23px;
+    font-size: 30px;
     color: white
   }
 
   .reserve-text-footer{
-    font-size: 12px;
+    font-size: 18px;
     color: white
   }
 
@@ -87,4 +87,18 @@
   }
 
   /* Para mobile */
-  @media screen and (max-width: 450px) {}
+  @media screen and (max-width: 450px) {
+
+    .email-text-footer {
+      font-size: 23px;
+    }
+  
+    .help-text-footer {
+      font-size: 23px;
+    }
+  
+    .reserve-text-footer{
+      font-size: 12px;
+    }
+
+  }
