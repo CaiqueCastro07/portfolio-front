@@ -17,19 +17,19 @@ function ContactForm() {
                             <form  className="contact-subform" action="#">
                                 <div className="form-div">
 
-                                    <div className="input-box">
+                                    <div className="input-box-contact">
                                         <span className="details">Your Name</span>
                                         <input className="input-field input-mobile" type="text" placeholder="type your name here..." />
                                     </div>
-                                    <div className="input-box">
+                                    <div className="input-box-contact">
                                         <span className="details">Email*</span>
                                         <input className="input-field input-mobile" type="text" placeholder="example@example.com" />
                                     </div>
-                                    <div className="input-box">
+                                    <div className="input-box-contact">
                                         <span className="details">Telephone*</span>
                                         <input className="input-field input-mobile" type="tel" placeholder="your telephone here..." />
                                     </div>
-                                    <div className="input-box">
+                                    <div className="input-box-contact">
                                         <span className="details">Message</span>
                                         <textarea className="input-field message" type="text" placeholder="type what you want to say to us..." />
                                     </div>

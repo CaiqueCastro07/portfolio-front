@@ -222,7 +222,7 @@ function ToDo(props) {
                     <img src={require(`../../assets/${e?.done ? "done-checkbox.png" : "to-do-checkbox.png"}`)} alt="" className="checkbox-img" />
                 </div>
                 <div className="task-text-wrapper">
-                    <input onMouseEnter={(evt)=>evt?.target?.focus()} value={editTaskValue} onKeyUp={(evt) => editTask(e?._id, evt)} onChange={(evt) => setEditTaskValue(evt?.target?.value)} className={taskEditing.includes(e?._id) ? "edit-task show" : "edit-task"} />
+                    <input onMouseEnter={(evt) => evt?.target?.focus()} value={editTaskValue} onKeyUp={(evt) => editTask(e?._id, evt)} onChange={(evt) => setEditTaskValue(evt?.target?.value)} className={taskEditing.includes(e?._id) ? "edit-task show" : "edit-task"} />
                     <p onClick={(evt) => taskControl(e?._id)} className={taskEditing.includes(e?._id) ? "task-text hide" : "task-text"} >{e?.task || ''}</p>
                 </div>
                 <div onClick={(evt) => taskControl(e?._id, taskEditing.includes(e?._id) ? "undo" : "delete", evt)} className="delete-task">{taskEditing.includes(e?._id) ? "undo" : "delete"}</div>

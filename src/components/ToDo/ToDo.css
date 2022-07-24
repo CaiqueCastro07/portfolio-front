@@ -6,17 +6,17 @@
 }
 
 .card__left {
-  border-top-style: inset;
+  border-top-style: solid;
   border-width: 25px;
-  border-color: #f7bc86;
+  border-color: #E88D39;
   background: white;
   box-shadow: 10px 15px 15px 10px rgba(0, 0, 0, 0.06);
 }
 
 .card__right {
-  border-top-style: inset;
+  border-top-style: solid;
   border-width: 25px;
-  border-color: #6eff7f;
+  border-color: #4AC959;
   background: white;
   box-shadow: 10px 15px 15px 10px rgba(0, 0, 0, 0.06);
 }
@@ -190,8 +190,6 @@
   .eraseall-btn {
     height: 50px;
     width: auto;
-    margin-right:auto;
-    margin-left:auto
   }
 
   .task__wrapper {
