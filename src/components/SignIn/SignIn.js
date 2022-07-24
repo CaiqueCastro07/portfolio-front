@@ -122,11 +122,11 @@ function SignIn(props) {
                                 (<>
                                     <div className="each-input">
                                         <label className="user">User:</label>
-                                        <input value={user} onChange={(evt) => setUser(evt?.target?.value)} className="input-field" type="text" placeholder="" />
+                                        <input value={user} onChange={(evt) => setUser(evt?.target?.value)} className="input-field-sign" type="text" placeholder="" />
                                     </div>
                                     <div className="each-input">
                                         <label className="password">Password:</label>
-                                        <input value={password} onChange={(evt) => setPassword(evt?.target?.value)} className="input-field" type="password" placeholder="" />
+                                        <input value={password} onChange={(evt) => setPassword(evt?.target?.value)} className="input-field-sign" type="password" placeholder="" />
                                     </div>
                                 </>)}
 

@@ -13,13 +13,14 @@
   margin-bottom: auto;
   background: white;
   width: 800px;
-  height: 600px;
+  height:max-content !important;
   z-index: 30
 }
 
 .signin__wrapper {
   width: 100%;
   height: 100%;
+  margin-bottom:10%;
 }
 
 .signin-header {
@@ -43,7 +44,7 @@
 }
 .input-field-sign{
   min-width: 270px;
-  max-width:350px;
+  max-width:300px;
 }
 
 .signin-green-btn {
@@ -83,6 +84,7 @@
   margin-left: auto;
   margin-right: auto;
   justify-content: center;
+  display:grid;
 }
 
 .each-input {
