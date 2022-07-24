@@ -46,11 +46,43 @@
 
   }
 
+  .footer-contact{
+    display:grid;
+    grid-auto-flow: row;
+    gap:4px;
+    width:300px;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: -18%;
+  }
+
+  .email-text-footer {
+    font-weight: 400;
+    font-size: 30px;
+    color: white
+  }
+
+  .help-text-footer {
+    font-weight: 400;
+    font-size: 30px;
+    color: white
+  }
+
+  .reserve-text-footer{
+    font-size: 20px;
+    color: white
+  }
+
+  .txt-wrp{
+    display:grid;
+    justify-content: center;
+  }
+
   /* Para 1920x1080 */
   @media screen and (min-width: 1700px) {
     .footer {
       height: 10%;
-      margin-top:5%;
+      margin-top: 5%;
     }
   }
 
