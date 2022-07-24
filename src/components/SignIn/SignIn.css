@@ -41,6 +41,10 @@
   position: absolute;
   z-index: 29
 }
+.input-field-sign{
+  min-width: 270px;
+  max-width:350px;
+}
 
 .signin-green-btn {
   font-family: 'Poppins', sans-serif;
@@ -75,9 +79,10 @@
 }
 
 .signin-inputs {
-  width: 50%;
+  width: 90%;
   margin-left: auto;
-  margin-right: auto
+  margin-right: auto;
+  justify-content: center;
 }
 
 .each-input {
@@ -130,7 +135,7 @@ label {
 @media screen and (max-width: 450px) {
 
   .signin {
-    width: 300px;
+    width:90%;
     height: 400px;
   }
 
@@ -144,14 +149,14 @@ label {
     height: auto
   }
 
-  .signin-inputs {}
-
-  .each-input {
-    margin-left: -23%;
+  .signin-inputs {
+   
   }
 
-  .input-field {
-    width: 200px;
+  .each-input {
+  }
+
+  .input-field-sign{
   }
 
   .unfocus-background {

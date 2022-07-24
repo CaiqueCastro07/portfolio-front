@@ -7,11 +7,7 @@
   grid-template-rows: auto;
   transition: width 1s, height 1s;
 
-  @media (max-width: 990px) {
-    grid-auto-flow: row;
-    justify-content: center;
-    grid-template-columns: 1fr;
-  }
+
 }
 
 .card {
@@ -36,7 +32,7 @@
 .get-in-touch {
   position: absolute;
   margin-top: 1%;
-  margin-left: -180px;
+  margin-left:1%;
   height: 50px;
   width: auto;
 }
@@ -61,7 +57,7 @@
   font-size: 17px;
 }
 
-.input-box {
+.input-box-contact {
   display: grid;
   grid-auto-flow: row;
 }
@@ -154,10 +150,8 @@ textarea {
   }
 
   .get-in-touch {
-    margin-top: 1%;
-    margin-left: -20%;
+    margin-top:3%;
     height: 50px;
-    width: 150px;
   }
 
 
@@ -170,7 +164,7 @@ textarea {
     margin-top: 15%;
     grid-auto-flow: column;
     justify-content: center;
-    grid-template-columns:100%;
+    grid-template-columns:minmax(300px,400px);
     grid-template-rows: auto;
   }
 
@@ -182,27 +176,25 @@ textarea {
   .contact-subform{
     margin-left:auto;
     margin-right:auto;
-    width:90%;
   }
-  .input-mobile{
-    width:100%;
-  }
-
+ 
   .get-in-touch {
     margin-top: 5%;
     margin-left: -40%;
-    height: 50px;
-    width: 150px;
+    height: 35px;
+    width:auto;
   }
 
+  .input-field{
+    min-width: 270px!important;
+    max-width: 400px!important;
+  }
 }
 
 /* para tablet */
 @media screen and (max-width: 830px) and (min-width:750px) {
 
   .get-in-touch {
-    margin-top: 3%;
-    margin-left: -23%;
     height: 50px;
     width: 150px;
   }
