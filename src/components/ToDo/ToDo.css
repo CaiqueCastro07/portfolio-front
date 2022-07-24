@@ -190,6 +190,8 @@
   .eraseall-btn {
     height: 50px;
     width: auto;
+    margin-left:-4%;
+    margin-right:auto;
   }
 
   .task__wrapper {
