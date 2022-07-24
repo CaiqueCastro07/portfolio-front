@@ -164,7 +164,7 @@ textarea {
     margin-top: 15%;
     grid-auto-flow: column;
     justify-content: center;
-    grid-template-columns:minmax(300px,400px);
+    grid-template-columns:minmax(250px,300px);
     grid-template-rows: auto;
   }
 
@@ -186,9 +186,10 @@ textarea {
   }
 
   .input-field{
-    min-width: 270px!important;
-    max-width: 400px!important;
+    min-width: 250px!important;
+    max-width: 290px!important;
   }
+  
 }
 
 /* para tablet */
