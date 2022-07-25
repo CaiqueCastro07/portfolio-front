@@ -201,12 +201,15 @@
 
 }
 
+@media screen and (max-width: 850px) {
+  .cards__wrapper {
+    grid-auto-flow: row;
+    grid-template-columns: 90%;
+    gap: 10px;
+  }
+}
 /* para table */
 @media screen and (max-width: 815px) and (min-width:790px) {
-  .cards__wrapper {
-    grid-template-columns: 400px 400px;
-
-  }
 
   .eraseall-btn {
     margin-left: 4%;
