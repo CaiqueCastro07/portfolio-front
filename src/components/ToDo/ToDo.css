@@ -171,7 +171,7 @@
   .cards__wrapper {
     grid-auto-flow: row;
     grid-template-columns: 90%;
-    gap: 10px;
+    gap: 0px;
   }
 
   .card {
