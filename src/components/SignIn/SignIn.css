@@ -13,7 +13,7 @@
   margin-bottom: auto;
   background: white;
   width: 800px;
-  height: max-content !important;
+  height: min-content;
   z-index: 30
 }
 
@@ -145,7 +145,6 @@ label {
 
   .signin {
     width: 90%;
-    height: 400px;
   }
 
   .signin-animation {
@@ -175,7 +174,6 @@ label {
 
   .signin {
     width: 90%;
-    height: 600px !important;
   }
 
   .signin-animation {
