@@ -7,7 +7,9 @@ function Footer() {
             <footer className="footer">
                 <div className="container-footer">
                     <div className="footer-contact">
-                       <div className="txt-wrp"><b className="help-text-footer">Need Help?</b></div> 
+                       <div className="txt-wrp">
+                        <b onClick={()=>window.open("https://www.linkedin.com/in/caique-d-148991220/", '_blank').focus()} className="help-text-footer">LinkedIn</b>
+                        </div> 
                         <div className="txt-wrp"><b className="email-text-footer">caiquecastroaraujo@gmail.com</b></div>
                     </div>
                 </div>

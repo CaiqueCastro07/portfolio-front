@@ -9,7 +9,6 @@ function ExtraIntro() {
                 <form className="container">
                     <div className="extraintro__wrapper">
                         <div className="extraintro__card card">
-                    
                             <div className="extraintro-slider">
                                 <div className="slider-component">
                                     <Responsive></Responsive>
