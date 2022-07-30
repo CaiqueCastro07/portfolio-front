@@ -51,3 +51,12 @@
   }
 
 }
+
+/* para tablet */
+@media screen and (max-width: 815px) and (min-width:601px) {
+
+  .black {
+    margin-top:40px;
+  }
+
+}
