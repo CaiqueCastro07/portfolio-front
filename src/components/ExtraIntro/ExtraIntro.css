@@ -14,16 +14,14 @@
   padding: 20px 35px;
 }
 
-.extraintro__card {
-
-}
+.extraintro__card {}
 
 .extraintro-slider {
   position: relative;
   height: 80%;
   width: 100%;
   border-radius: 7px;
-  top:120px;
+  top: 120px;
   left: 5%;
   z-index: 6;
 }
@@ -39,13 +37,13 @@
 .extraintro-bg {
   background: #3c78f1;
   width: 700px;
-  height:350px;
+  height: 350px;
   border-radius: 7px;
   z-index: 4;
   border-color: rgb(255, 255, 255, 0.7);
   border-width: 1px;
   border-style: solid;
-  margin-top:-300px;
+  margin-top: -300px;
 }
 
 .mini-intro {
@@ -75,8 +73,7 @@
 .intro-txt {
   margin-top: 5%;
   font-size: 12px;
-  margin-left:10px
-
+  margin-left: 10px
 }
 
 .mini-intro-txt-area {
@@ -89,9 +86,9 @@
   font-weight: 400;
   color: #3c78f1;
   cursor: pointer;
-  position:absolute;
-  bottom:10%;
-  margin-left:10px;
+  position: absolute;
+  bottom: 10%;
+  margin-left: 10px;
 }
 
 .slick-active:before {
@@ -103,7 +100,7 @@
   margin-top: 5%;
   height: 22px;
   width: auto;
-  margin-left:10px;
+  margin-left: 10px;
   pointer-events: none;
 }
 
@@ -159,7 +156,7 @@
 
   .extraintro-slider {
     top: 100px;
-    left:100px;
+    left: 100px;
   }
 
   .extraintro-bg {
@@ -186,7 +183,6 @@
     margin-right: auto;
     z-index: 5;
     margin-bottom: 450px;
-
   }
 
   .extraintro-bg {
@@ -199,15 +195,19 @@
     width: 100%;
   }
 
+  .goodthings-txt {
+    margin-left: 20%;
+  }
+
   .extraintro-slider {
     width: 120%;
     left: 50px;
-    top:120px;
+    top: 120px;
   }
 
 }
 
-/* para table */
+/* para tablet */
 @media screen and (max-width: 815px) and (min-width:601px) {
 
   .extraintro-bg {

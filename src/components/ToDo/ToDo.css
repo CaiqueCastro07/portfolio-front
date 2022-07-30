@@ -189,8 +189,11 @@
   }
 
   .add-task-wrapper {
-    grid-template-columns: 0% 75% 25%;
+    grid-template-columns: 0% 78% 22%;
     gap: 10px;
+    width:80%;
+    margin-left:auto;
+    margin-right:auto
   }
 
   .eraseall-btn {
@@ -202,6 +205,7 @@
     gap: 5px;
     margin-left: auto;
     margin-right: auto;
+    width:80%;
   }
 
 }
