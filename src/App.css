@@ -180,6 +180,6 @@ table {
 /* Para mobile */
 @media screen and (max-width: 450px) {
   .bg-arrow-right {
-    top: 6%
+    top: 15%
   }
 }
