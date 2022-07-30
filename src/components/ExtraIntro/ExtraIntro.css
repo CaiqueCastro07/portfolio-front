@@ -1,17 +1,12 @@
 .extraintro__wrapper {
   display: grid;
   grid-auto-flow: column;
-  margin-left: 5%;
+  margin-left: 20px;
   justify-content: center;
-  grid-template-columns: 80vw;
+  grid-template-columns: 300px;
   grid-template-rows: 450px;
   margin-bottom: 180px;
   transition: width 1s, height 1s;
-  @media (max-width: 990px) {
-    grid-auto-flow: row;
-    justify-content: center;
-    grid-template-columns: 1fr;
-  }
 }
 
 .card {
@@ -26,31 +21,31 @@
 .extraintro-slider {
   position: relative;
   height: 80%;
-  width: 90%;
+  width: 100%;
   border-radius: 7px;
-  z-index: 4;
-  top: -60%;
+  top:120px;
   left: 5%;
+  z-index: 6;
 }
 
 .slider-component {
-  margin-top: 120px;
   width: 750px;
   height: auto;
+  z-index: 6;
   margin-left: auto;
   margin-right: auto;
 }
 
 .extraintro-bg {
-  position: absolute;
   background: #3c78f1;
-  height: 50%;
-  width: 60vw;
+  width: 700px;
+  height:350px;
   border-radius: 7px;
   z-index: 4;
   border-color: rgb(255, 255, 255, 0.7);
   border-width: 1px;
   border-style: solid;
+  margin-top:-300px;
 }
 
 .mini-intro {
@@ -163,13 +158,13 @@
   }
 
   .extraintro-slider {
-    top: -50%;
-    left: 5%;
+    top: 100px;
+    left:100px;
   }
 
   .extraintro-bg {
     height: 350px;
-    width: 900px;
+    width: 800px;
   }
 
   .goodthings-txt {
@@ -179,16 +174,16 @@
 }
 
 /* Para mobile */
-@media screen and (max-width: 550px) {
+@media screen and (max-width: 600px) {
+
   .extraintro__wrapper {
     display: grid;
     grid-auto-flow: column;
     justify-content: center;
-    grid-template-columns: 400px;
+    grid-template-columns: 500px;
     grid-template-rows: 200px;
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: 90%;
     z-index: 5;
     margin-bottom: 450px;
 
@@ -205,15 +200,25 @@
   }
 
   .extraintro-slider {
-    width: 100%;
-    left: 0;
-    top: -60%;
+    width: 120%;
+    left: 50px;
+    top:120px;
   }
 
 }
 
 /* para table */
-@media screen and (max-width: 815px) and (min-width:790px) {
+@media screen and (max-width: 815px) and (min-width:601px) {
+
+  .extraintro-bg {
+    width: 80%;
+    margin-left: 0;
+    height: 340px
+  }
+
+  .extraintro-slider {
+    width: 120%;
+  }
 
   .extraintro-bg {
     height: 350px;
