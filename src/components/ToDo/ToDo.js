@@ -262,7 +262,7 @@ function ToDo(props) {
                             <div className="head__wrapper">
                                 <b className="to-do-title">Done</b>
                                 <div className="subtitle-wrapper-done">
-                                    <p className="subtitle-text">Contratulations<br></br>You have done {tasks.filter((e) => e?.done)?.length} tasks</p>
+                                    <p className="subtitle-text">Contratulations<br></br>You have completed {tasks.filter((e) => e?.done)?.length} tasks</p>
                                 </div></div>
                             {tasks.filter((e) => e?.done).map((e, i) => buildTaskDiv(e, i))}
                             <img onClick={() => deleteTask(true)} src={require("../../assets/eraseall-btn.png")} alt="" className="eraseall-btn" />

@@ -38,15 +38,15 @@ function ContactForm() {
                                     </div>
                                     <div className="input-box-contact">
                                         <span className="details">Email*</span>
-                                        <input value={yourEmail} onChange={(evt)=>setYourEmail(evt?.target?.value)} className="input-field input-mobile" type="text" placeholder="example@example.com" />
+                                        <input value={yourEmail} onChange={(evt)=>setYourEmail(evt?.target?.value)} className="input-field input-mobile" type="text" placeholder="yourname@example.com" />
                                     </div>
                                     <div className="input-box-contact">
-                                        <span className="details">Telephone*</span>
+                                        <span className="details">Phone*</span>
                                         <input value={yourPhone} onChange={(evt)=>setYourPhone(evt?.target?.value)} className="input-field input-mobile" type="tel" placeholder="your telephone here..." />
                                     </div>
                                     <div className="input-box-contact">
                                         <span className="details">Message</span>
-                                        <textarea value={yourMessage} onChange={(evt)=>setYourMessage(evt?.target?.value)} className="input-field message" type="text" placeholder="type what you want to say to us..." />
+                                        <textarea value={yourMessage} onChange={(evt)=>setYourMessage(evt?.target?.value)} className="input-field message" type="text" placeholder="type your messahe here..." />
                                     </div>
                                     <div onClick={sendMessage} className="submit-form-btn">
                                         <img src={require("../../assets/send-now.png")} alt="" className="send-now" />
