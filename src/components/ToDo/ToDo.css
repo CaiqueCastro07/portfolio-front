@@ -24,6 +24,8 @@
 .card {
   z-index: 2;
   height: max-content;
+  display:grid;
+  justify-content:center
 }
 
 .task__wrapper {
@@ -160,6 +162,8 @@
   width: auto;
   margin-left: 10%;
   cursor: pointer;
+  margin-left:auto;
+  margin-right:auto;
 }
 
 .eraseall-btn-img {
@@ -192,8 +196,6 @@
   .eraseall-btn {
     height: 50px;
     width: auto;
-    margin-left: -4%;
-    margin-right: auto;
   }
 
   .task__wrapper {
@@ -218,10 +220,6 @@
     margin-right: auto;
     gap: 10px;
   }
-
-  .eraseall-btn {
-    margin-left: 4%;
-  }  
 
   .add-task-wrapper {
   margin-left:20px;

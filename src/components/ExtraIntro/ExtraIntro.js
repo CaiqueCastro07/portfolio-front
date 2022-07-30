@@ -9,13 +9,14 @@ function ExtraIntro() {
                 <form className="container">
                     <div className="extraintro__wrapper">
                         <div className="extraintro__card card">
-                            <div className="extraintro-bg">
-                            <img src={require("../../assets/goodthings-txt.png")} alt="" className="goodthings-txt" />
-                            </div>
+                    
                             <div className="extraintro-slider">
                                 <div className="slider-component">
                                     <Responsive></Responsive>
                                 </div>
+                            </div>
+                            <div className="extraintro-bg">
+                            <img src={require("../../assets/goodthings-txt.png")} alt="" className="goodthings-txt" />
                             </div>
                         </div>
                     </div>
