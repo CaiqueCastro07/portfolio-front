@@ -37,7 +37,6 @@
   z-index: 1;
   margin-right: auto;
   margin-left: auto;
-
 }
 
 .organize_intro {
@@ -59,7 +58,7 @@
 /* Para mobile */
 @media screen and (max-width: 550px) {
   .intro{
-    margin-top:-15%;
+    margin-top:25%;
   }
   .intro__wrapper {
     grid-auto-flow: row;
@@ -70,6 +69,7 @@
   .intro__left {
     margin-right: auto;
     margin-left: auto;
+    height:350px;
     }
 
   .intro__img {
@@ -92,6 +92,7 @@
   .intro__left{
     margin-left:0px;
   }
+
   .intro__img {
   margin-left: -15px;
   max-width: 300px;
