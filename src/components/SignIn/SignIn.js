@@ -35,7 +35,7 @@ function SignIn(props) {
             return
         }
 
-        authorize.registerUser(user, email, password).then((res) => {
+        authorize.registerUser(user?.toLowerCase(), email?.toLowerCase(), password).then((res) => {
 
             if (res?.status != 200) {
                 setReturnedError(res?.message || "Error")
@@ -44,7 +44,6 @@ function SignIn(props) {
 
             console.log(res?.message)
             localStorage.setItem("login", res?.data)
-            resetValues()
             window.location.reload()
 
         }).catch((err) => {
@@ -62,7 +61,7 @@ function SignIn(props) {
             return
         }
 
-        authorize.login(user, password).then((res) => {
+        authorize.login(user?.toLowerCase(), password?.toLowerCase()).then((res) => {
 
             if (res?.status != 200) {
                 setReturnedError(res?.message || "Error")
@@ -71,7 +70,6 @@ function SignIn(props) {
 
             localStorage.setItem("login", res?.data)
             props.setLogged(res?.data)
-            resetValues()
             window.location.reload()
 
 
