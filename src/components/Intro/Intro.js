@@ -10,7 +10,9 @@ function Intro() {
                        
                         <div className="intro__left">
                         <img src={require("../../assets/organize_intro.png")} alt="" className="organize_intro"/>
-                        <img src={require("../../assets/go-to-do-btn.png")} alt="" className="go-to-do-btn"/>
+                        <div className="go-to-do-btn">
+                         <img src={require("../../assets/go-to-do-btn.png")} alt="" className="go-to-do-btn-img" />
+                        </div>
                         </div>
 
                         <div className="intro__right">

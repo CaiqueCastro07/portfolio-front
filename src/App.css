@@ -150,6 +150,7 @@ table {
   position: absolute;
   z-index: 1;
   transition: width 1s, height 1s;
+  pointer-events: none;
 }
 
 .bg-arrow-up {
@@ -161,6 +162,7 @@ table {
   position: absolute;
   z-index: 0;
   transition: width 1s, height 1s;
+  pointer-events: none;
 }
 
 /* For 1920x1080 */

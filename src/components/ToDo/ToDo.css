@@ -162,6 +162,12 @@
   cursor: pointer;
 }
 
+.eraseall-btn-img {
+  height: 100%;
+  width: auto;
+  pointer-events: none
+}
+
 /* Para 1920x1080 */
 @media screen and (min-width: 1700px) {}
 
@@ -189,8 +195,8 @@
   .eraseall-btn {
     height: 50px;
     width: auto;
-    margin-left:-4%;
-    margin-right:auto;
+    margin-left: -4%;
+    margin-right: auto;
   }
 
   .task__wrapper {
@@ -198,7 +204,6 @@
     margin-left: auto;
     margin-right: auto;
   }
-
 
 }
 
@@ -209,6 +214,7 @@
     gap: 10px;
   }
 }
+
 /* para table */
 @media screen and (max-width: 815px) and (min-width:790px) {
 
