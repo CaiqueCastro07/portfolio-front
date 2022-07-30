@@ -1,14 +1,14 @@
 const introSlides = [
     {
-        text: "Organize your daly job enhance your life performance",
+        text: "Site built with React, try it on your phone also!",
         image: "slide-img1.png"
     },
     {
-        text: "Mark one activity as done makes your brain understands the power of doing",
+        text: "To-Do List handled by a powerful NodeTS application",
         image: "slide-img2.png"
     },
     {
-        text: "Careful with misunderstanding the difference between a list of things and a list of desires",
+        text: "Contact form handled by a Go application, your data is safe with us",
         image: "slide-img3.png"
     }
 ]

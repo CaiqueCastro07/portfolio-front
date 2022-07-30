@@ -80,14 +80,14 @@
   width: 80%;
   margin-left: auto;
   margin-right: auto;
-  background: #46BD62;
+  background: #3c78f1;
   border-radius: 5px;
   cursor: pointer;
   margin-bottom: 15px;
 }
 
 .green-sm-bar {
-  background: #46BD62;
+  background: #3c78f1;
   width: 100px;
   height: 20px;
   margin-top: -70px;
@@ -141,7 +141,7 @@ textarea {
   }
 
   .green-sm-bar {
-    background: #46BD62;
+    background: #3c78f1;
     width: 100px;
     height: 20px;
     margin-top: -50px;
