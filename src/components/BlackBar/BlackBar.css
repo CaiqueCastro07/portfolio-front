@@ -34,18 +34,20 @@
 }
 
 /* Para 1920x1080 */
-@media screen and (min-width: 1700px) {
-
-}
+@media screen and (min-width: 1700px) {}
 
 /* Para mobile */
 @media screen and (max-width: 550px) {
-  .black__wrapper{
-    max-width:300px;
+  .black__wrapper {
+    max-width: 300px;
   }
-  .black{
-    margin-bottom:20%;
-    height:180px;
+
+  .black {
+    margin-bottom: 20%;
+    height: 180px;
+    margin-top:40px;
   }
-  
+
+
+
 }
