@@ -74,6 +74,7 @@
   margin-top: -15px;
   width: 100%;
   height: 150px;
+  pointer-events: none;
 }
 
 .intro-txt {
@@ -107,7 +108,8 @@
   margin-top: 5%;
   height: 22px;
   width: auto;
-  margin-left:10px
+  margin-left:10px;
+  pointer-events: none;
 }
 
 .icon-coopers {
@@ -116,7 +118,8 @@
   width: auto;
   margin-left: 80%;
   margin-bottom: -5%;
-  margin-top: -8%
+  margin-top: -8%;
+  pointer-events: none;
 }
 
 .slick-dots li button:before {
@@ -147,7 +150,8 @@
   height: 30px;
   width: auto;
   margin-top: 60px;
-  margin-left: 12%
+  margin-left: 12%;
+  pointer-events: none;
 }
 
 /* Para 1920x1080 */

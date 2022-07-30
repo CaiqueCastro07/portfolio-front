@@ -13,14 +13,18 @@
   margin-bottom: auto;
   background: white;
   width: 800px;
-  height:max-content !important;
+  height: max-content !important;
   z-index: 30
+}
+
+.signin-animation {
+  pointer-events: none;
 }
 
 .signin__wrapper {
   width: 100%;
   height: 100%;
-  margin-bottom:10%;
+  margin-bottom: 10%;
 }
 
 .signin-header {
@@ -33,6 +37,8 @@
 
 .signin-text {
   height: 150px;
+  pointer-events: none;
+
 }
 
 .unfocus-background {
@@ -42,9 +48,10 @@
   position: absolute;
   z-index: 29
 }
-.input-field-sign{
+
+.input-field-sign {
   min-width: 270px;
-  max-width:300px;
+  max-width: 300px;
 }
 
 .signin-green-btn {
@@ -84,7 +91,7 @@
   margin-left: auto;
   margin-right: auto;
   justify-content: center;
-  display:grid;
+  display: grid;
 }
 
 .each-input {
@@ -137,7 +144,7 @@ label {
 @media screen and (max-width: 450px) {
 
   .signin {
-    width:90%;
+    width: 90%;
     height: 400px;
   }
 
@@ -151,15 +158,11 @@ label {
     height: auto
   }
 
-  .signin-inputs {
-   
-  }
+  .signin-inputs {}
 
-  .each-input {
-  }
+  .each-input {}
 
-  .input-field-sign{
-  }
+  .input-field-sign {}
 
   .unfocus-background {
     height: 545vh
@@ -171,7 +174,7 @@ label {
 @media screen and (max-width: 830px) and (min-width:451px) {
 
   .signin {
-    width:90%;
+    width: 90%;
     height: 600px !important;
   }
 
@@ -185,18 +188,14 @@ label {
     height: auto
   }
 
-  .signin-inputs {
-   
-  }
+  .signin-inputs {}
 
-  .each-input {
-  }
+  .each-input {}
 
-  .input-field-sign{
-  }
+  .input-field-sign {}
 
   .unfocus-background {
     height: 545vh
   }
-  
+
 }

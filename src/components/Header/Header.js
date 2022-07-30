@@ -14,9 +14,11 @@ function Header(props) {
             <header className="header">
                 <div className="container">
                     <div className="header__wrapper">
-                        <img onClick={()=>window.location.reload()} src={require("../../assets/home-logo.png")} alt="" className="home-logo" />
-                        {props?.logged ? (<img onClick={logout} src={require("../../assets/signout-btn.png")} alt="" className="signin-btn" />
-                        ) : (<img onClick={() => props?.setLoginScreen(true)} src={require("../../assets/signin-btn.png")} alt="" className="signin-btn" />
+                        <div onClick={()=>window.location.reload()} className="home-logo">
+                        <img src={require("../../assets/home-logo.png")} alt="" className="home-img"  />
+                        </div>
+                        {props?.logged ? (<div className="signin-btn" onClick={logout} ><img src={require("../../assets/signout-btn.png")} className="signin-btn-img" alt="" /></div>
+                        ) : (<div onClick={() => props?.setLoginScreen(true)} className="signin-btn"><img src={require("../../assets/signin-btn.png")} alt="" className="signin-btn-img" /></div>
                         )}
                     </div>
                 </div>

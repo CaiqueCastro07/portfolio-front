@@ -11,14 +11,22 @@
 
 .home-logo {
   padding-left: 3%;
-  width: 200px;
-  height: 67px;
+  width: 150px;
+  height: auto;
   z-index: 2;
   cursor: pointer;
   transition: width 1s, height 1s;
 }
 
+.home-img {
+  width: 100%;
+  height: auto;
+  pointer-events: none;
+}
+
 .signin-btn {
+  display:flex;
+  justify-content:center;
   margin-top: 1%;
   margin-right: 3%;
   width: 150px;
@@ -29,18 +37,32 @@
   transition: width 1s, height 1s;
 }
 
+.signin-btn-img{
+  width:100%;
+  height:auto;
+  pointer-events: none;
+}
+
 /* Para 1920x1080 */
-@media screen and (min-width: 1700px) {}
+@media screen and (min-width: 1700px) {
+
+  .home-logo {
+    width: 220px;
+  }
+
+  .signin-btn {
+    width: 220px;
+    height: 75px;
+  }
+}
 
 /* Para mobile */
 @media screen and (max-width: 450px) {
   .home-logo {
-    height: 57px;
-    width: 170px
+    width: 130px
   }
 
   .signin-btn {
-    height: 41px;
     width: 120px;
   }
 }

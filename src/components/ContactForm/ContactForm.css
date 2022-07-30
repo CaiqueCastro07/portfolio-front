@@ -22,11 +22,13 @@
   border-radius: 50%;
   width: auto;
   height: 110px;
+  pointer-events: none;
 }
 
 .tatiana {
   height: 100%;
   width: 100%;
+  pointer-events: none;
 }
 
 .get-in-touch {
@@ -35,6 +37,7 @@
   margin-left:1%;
   height: 50px;
   width: auto;
+  pointer-events: none;
 }
 
 .form-div {
@@ -69,6 +72,7 @@
 .send-now {
   width: 100px;
   height: 19px;
+  pointer-events:none;
 }
 
 .submit-form-btn {
