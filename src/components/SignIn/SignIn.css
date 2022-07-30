@@ -166,3 +166,37 @@ label {
   }
 
 }
+
+/* para tablet */
+@media screen and (max-width: 830px) and (min-width:451px) {
+
+  .signin {
+    width:90%;
+    height: 600px !important;
+  }
+
+  .signin-animation {
+    width: 200px;
+    height: auto
+  }
+
+  .signin-text {
+    width: 200px;
+    height: auto
+  }
+
+  .signin-inputs {
+   
+  }
+
+  .each-input {
+  }
+
+  .input-field-sign{
+  }
+
+  .unfocus-background {
+    height: 545vh
+  }
+  
+}
