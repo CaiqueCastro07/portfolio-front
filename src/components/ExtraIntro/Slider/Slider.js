@@ -22,7 +22,7 @@ export default class Responsive extends Component {
           <div className="mini-intro-txt-area">
             <img src={require("../../../assets/fun-logo.png")} alt="" className="fun-logo" />
             <p className="intro-txt">{e?.text || ''}</p>
-            <p onClick={()=>window.open(e?.link, '_blank').focus()} className="read-more-link">read more</p>
+            <p onClick={()=>window.open(e?.link, '_blank').focus()} className="read-more-link">view the code</p>
           </div>
         </div>
       </div>;
