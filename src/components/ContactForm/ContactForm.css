@@ -7,7 +7,6 @@
   grid-template-rows: auto;
   transition: width 1s, height 1s;
 
-
 }
 
 .card {
@@ -114,6 +113,20 @@ textarea {
   min-width: 330px;
   max-width: 330px;
   min-height: 100px;
+}
+
+.send-msg-return{
+  margin-top:5px;
+  margin-left:auto;
+  margin-right:auto;
+  color:red;
+}
+
+.success-msg{
+  margin-top:5px;
+  margin-left:auto;
+  margin-right:auto;
+  color:black !important
 }
 
 /* Para 1920x1080 */

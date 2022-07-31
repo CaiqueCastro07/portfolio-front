@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Authorize } from "../../Api/api";
-import "./SignIn.css"
+import "./SignIn.css";
+import { validate } from "react-email-validator";
 
 function SignIn(props) {
 
@@ -35,6 +36,12 @@ function SignIn(props) {
             return
         }
 
+        if(!validate(email)){
+            setReturnedError("The email is invalid")
+            resetValues(1,1,1,0)
+            return
+        }
+
         authorize.registerUser(user?.toLowerCase(), email?.toLowerCase(), password).then((res) => {
 
             if (res?.status != 200) {
@@ -61,7 +68,7 @@ function SignIn(props) {
             return
         }
 
-        authorize.login(user?.toLowerCase(), password?.toLowerCase()).then((res) => {
+        authorize.login(user?.toLowerCase(), password).then((res) => {
 
             if (res?.status != 200) {
                 setReturnedError(res?.message || "Error")
