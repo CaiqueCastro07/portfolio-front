@@ -12,7 +12,7 @@ const introSlides = [
     {
         text: "Contact form handled by a Go application, your data is safe with us",
         image: "slide-img3.png",
-        link:"https://github.com/CaiqueCastro07/portfolio-backend-golang"
+        link:"https://github.com/CaiqueCastro07/portfolio-backend-go"
     }
 ]
 
