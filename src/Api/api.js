@@ -10,10 +10,16 @@ class ApiController {
                 userid
             }
         })
+
+        this.goApi = axios.create({
+            baseURL: "https://2569-2804-14c-ba-8462-ddc9-115d-5e76-d19.ngrok.io/", headers: {
+                Authorization: "Bearer chave777"
+            }
+        })
     }
 
-
     async getTasksApi() {
+
         try {
             const response = await this.api.get("tasks")
 
@@ -58,14 +64,15 @@ class ApiController {
         try {
 
             let response;
+
             const done = target ? "done" : "todo"
 
             if (typeOfRequest == 'string' && target?.length) response = await this.api.delete("task/" + target);
             if (typeOfRequest === 'boolean') response = await this.api.delete("task/" + done);
 
-            if (response?.status == 200) return true;
+            if (response?.status != 200) return false;
 
-            return false
+            return true
 
         } catch (err) {
             console.log(err)
@@ -83,14 +90,38 @@ class ApiController {
         }
 
         try {
+
             const response = await this.api.put("task/" + target, { val: change })
 
-            if (response?.status == 200) return true;
+            if (response?.status != 200) return false;
 
-            return false
+            return true
 
         } catch (err) {
             console.log(err)
+            return false
+        }
+
+    }
+
+    async sendMessageApi(name, email, message) {
+
+        if (!email || !message) {
+            return false
+        }
+
+        try {
+
+            const response = await this.goApi.post("message", { name:name || "anonymous", email, message })
+
+            console.log("aa", response)
+
+            if (response?.status != 200) return false;
+
+            return true
+
+        } catch (err) {
+            console.log("aaaaa", err)
             return false
         }
 
@@ -104,7 +135,7 @@ class Authorize {
 
     constructor() {
         this.api = axios.create({
-            baseURL: "https://portfoliocaique.click/",headers:{
+            baseURL: "https://portfoliocaique.click/", headers: {
                 Authorization: "Bearer chave777"
             }
         })
