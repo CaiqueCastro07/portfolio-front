@@ -12,7 +12,7 @@ class ApiController {
         })
 
         this.goApi = axios.create({
-            baseURL: "https://2569-2804-14c-ba-8462-ddc9-115d-5e76-d19.ngrok.io/", headers: {
+            baseURL: "https://portfoliocaique.click/goapi/", headers: {
                 Authorization: "Bearer chave777"
             }
         })
@@ -21,6 +21,7 @@ class ApiController {
     async getTasksApi() {
 
         try {
+            
             const response = await this.api.get("tasks")
 
             return response?.data?.data
