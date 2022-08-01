@@ -10,7 +10,6 @@ function ToDo(props) {
     const [taskEditing, setTaskEditing] = useState([])
     const [newTaskValue, setNewTaskValue] = useState("")
     const [editTaskValue, setEditTaskValue] = useState("")
-    //const input = useRef(null)
 
     const [tasks, setTasks] = useState([])
 
@@ -235,7 +234,7 @@ function ToDo(props) {
     return (
         <>
             <section className="cards" id="cards">
-                <div className="container">
+                <div id="todo-place" className="container">
                     <div className="cards__wrapper">
 
                         <div className="card__left card">
