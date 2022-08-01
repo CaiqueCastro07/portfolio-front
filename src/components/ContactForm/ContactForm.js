@@ -92,7 +92,7 @@ function ContactForm() {
                                     </div>
                                     <div className="send-msg-return">{sendMsgReturn}</div>
                                     <div onClick={sendMessage} className="submit-form-btn">
-                                        <img src={require("../../assets/send-now.png")} alt="" className="send-now" />
+                                        SEND NOW
                                     </div>
                                 </div>
 

@@ -17,8 +17,8 @@ function Header(props) {
                         <div onClick={()=>window.location.reload()} className="home-logo">
                         <img src={require("../../assets/home-logo.png")} alt="" className="home-img"  />
                         </div>
-                        {props?.logged ? (<div className="signin-btn" onClick={logout} ><img src={require("../../assets/signout-btn.png")} className="signin-btn-img" alt="" /></div>
-                        ) : (<div onClick={() => props?.setLoginScreen(true)} className="signin-btn"><img src={require("../../assets/signin-btn.png")} alt="" className="signin-btn-img" /></div>
+                        {props?.logged ? (<div className="signin-btn" onClick={logout}>logout</div>
+                        ) : (<div onClick={() => props?.setLoginScreen(true)} className="signin-btn">login</div>
                         )}
                     </div>
                 </div>

@@ -27,12 +27,17 @@
 .signin-btn {
   display:flex;
   justify-content:center;
+  align-items: center;
   margin-top: 1%;
   margin-right: 3%;
   width: 150px;
   height: 51px;
   background-color: black;
   z-index: 2;
+  font-size:22px;
+  font-family:'Courier New', Courier, monospace;
+  font-weight: 400;
+  color:white;
   cursor: pointer;
   transition: width 1s, height 1s;
 }
