@@ -34,7 +34,6 @@ function ToDo(props) {
         }
 
         api.getTasksApi().then((tasksArray) => {
-            console.log(tasksArray)
             Array.isArray(tasksArray) && tasksArray?.length && setTasks(tasksArray)
         })
     }
