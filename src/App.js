@@ -10,12 +10,21 @@ import ExtraIntro from './components/ExtraIntro/ExtraIntro';
 import ApiController from './Api/api';
 import SignIn from './components/SignIn/SignIn';
 import { User } from './data/data';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 function App() {
 
   const [logged, setLogged] = useState(false)
   const [loginScreen, setLoginScreen] = useState(false)
+  const [todoPlace,setTodoPlace]= useState(false)
+
+  useEffect(() => {
+    const el = document.getElementById('todo-place')
+
+    !todoPlace && setTodoPlace(el)
+  }, []);
+
+
   const session = localStorage.getItem("login")
 
   //localStorage.removeItem("login")
@@ -30,7 +39,7 @@ function App() {
       <Header setLogged={setLogged} logged={logged} setLoginScreen={setLoginScreen}></Header>
       <main className="main">
         <img src={require("./assets/BG-arrow-left.png")} alt="" className="bg-arrow-right" />
-        <Intro></Intro>
+        <Intro todoPlace={todoPlace}></Intro>
         <BlackBar></BlackBar>
         <ToDo logged={logged}></ToDo>
         <img src={require("./assets/BG-arrow-up.png")} alt="" className="bg-arrow-up" />

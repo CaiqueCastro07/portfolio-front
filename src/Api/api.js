@@ -27,7 +27,7 @@ class ApiController {
             return response?.data?.data
 
         } catch (err) {
-            console.log(err)
+            console.log("##getTasksApi()",err)
             return false
         }
 
@@ -36,7 +36,7 @@ class ApiController {
     async addNewTaskApi(text) {
 
         if (!text || typeof text != 'string') {
-            console.log("Variavel 'text' não enviada na função addNewTaskApi")
+            console.log("##addNewTaskApi() ","text is not a string")
             return false
         }
 
@@ -48,7 +48,7 @@ class ApiController {
             return false
 
         } catch (err) {
-            console.log(err)
+            console.log("##addNewTaskApi()",err)
             return false
         }
 
@@ -59,6 +59,7 @@ class ApiController {
         const typeOfRequest = typeof target
 
         if (typeOfRequest != 'string' && typeOfRequest != "boolean") {
+            console.log("##deleteTaskApi() ","target is not a string neither a boolean")
             return false
         }
 
@@ -76,7 +77,7 @@ class ApiController {
             return true
 
         } catch (err) {
-            console.log(err)
+            console.log("##deleteTaskApi()",err)
             return false
         }
     }
@@ -99,7 +100,7 @@ class ApiController {
             return true
 
         } catch (err) {
-            console.log(err)
+            console.log("##editTaskApi()",err)
             return false
         }
 
@@ -107,22 +108,25 @@ class ApiController {
 
     async sendMessageApi(name, email, message) {
 
-        if (!email || !message) {
-            return false
+        if(![name,email,message].every((e)=>typeof e == 'string' && e)){
+            console.log("##sendMessageApi() - name, email or message is not a string",)
+            return
         }
+
+        name = name?.trim()
+        email = email?.trim()?.toLowerCase()
+        message = message?.trim()
 
         try {
 
             const response = await this.goApi.post("message", { name:name || "anonymous", email, message })
-
-            console.log("aa", response)
 
             if (response?.status != 200) return false;
 
             return true
 
         } catch (err) {
-            console.log("aaaaa", err)
+            console.log("##sendMessageApi()",err)
             return false
         }
 
@@ -144,8 +148,13 @@ class Authorize {
 
     async login(user, password) {
 
-        if (!user || typeof user != 'string') return false
-        if (!password || typeof password != 'string') return false
+        if(![user,password].every((e)=>typeof e == 'string' && e)){
+            console.log("##login() - user or password is not a string",)
+            return
+        }
+
+        user = user?.trim()?.toLowerCase()
+        password = password?.trim()
 
         try {
             const response = await this.api.post("login", { user, password })
@@ -164,9 +173,14 @@ class Authorize {
 
     async registerUser(user, email, password) {
 
-        if (!user || typeof user != 'string') return false
-        if (!email || typeof email != 'string') return false
-        if (!password || typeof password != 'string') return false
+        if(![user,password].every((e)=>typeof e == 'string' && e)){
+            console.log("##registeUser() - user, email or password is not a string",)
+            return
+        }
+
+        user = user?.trim()?.toLowerCase()
+        password = password?.trim()
+        email = email?.trim()?.toLowerCase()
 
         try {
             const response = await this.api.post("register", { user, email, password })
