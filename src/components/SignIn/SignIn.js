@@ -2,22 +2,25 @@ import { useState } from "react";
 import { Authorize } from "../../Api/api";
 import "./SignIn.css";
 import { validate } from "react-email-validator";
+import SafeKey from "../../helpers/helpers";
 
 function SignIn(props) {
 
     const [registerMode, setRegisterMode] = useState(false);
     const [user, setUser] = useState("")
+
     const [password, setPassword] = useState("")
     const [rPassword, setRPassword] = useState("")
+    
     const [email, setEmail] = useState("")
-    const [returnedError,setReturnedError] = useState("")
+    const [returnedError, setReturnedError] = useState("")
 
     if (props?.logged) return (<></>);
     if (!props?.loginScreen) return (<></>);
 
     const authorize = new Authorize()
 
-    const resetValues = (u,p,rp,e) => {
+    const resetValues = (u, p, rp, e) => {
         !u && setUser("")
         !p && setPassword("")
         !rp && setRPassword("")
@@ -31,14 +34,14 @@ function SignIn(props) {
             return
         }
 
-        if(password !== rPassword){
+        if (password !== rPassword) {
             setReturnedError("The passwods do not match")
             return
         }
 
-        if(!validate(email)){
+        if (!validate(email)) {
             setReturnedError("The email is invalid")
-            resetValues(1,1,1,0)
+            resetValues(1, 1, 1, 0)
             return
         }
 
@@ -55,7 +58,7 @@ function SignIn(props) {
 
         }).catch((err) => {
 
-            })
+        })
 
         resetValues()
 
@@ -105,7 +108,7 @@ function SignIn(props) {
             <section className="signin">
                 <div className="container">
                     <div className="signin__wrapper">
-                        <div onClick={() => {props.setLoginScreen(false); setReturnedError("")}} className="close-btn">close</div>
+                        <div onClick={() => { props.setLoginScreen(false); setReturnedError("") }} className="close-btn">close</div>
                         <div className="signin-header">
                             <img src={require("../../assets/signin-animation.png")} alt="" className="signin-animation" />
                             <img src={require("../../assets/sign-in-text.png")} alt="" className="signin-text" />
@@ -123,11 +126,11 @@ function SignIn(props) {
                                 </div>
                                 <div className="each-input">
                                     <label className="password">Password:</label>
-                                    <input value={password} onChange={(evt) => setPassword(evt?.target?.value)} className="input-field-sign" type="password" placeholder="" />
+                                    <input value={password} className="input-field-sign" type="password" placeholder="" />
                                 </div>
                                 <div className="each-input">
                                     <label className="password">Repeat the password:</label>
-                                    <input value={rPassword} onChange={(evt) => setRPassword(evt?.target?.value)} className="input-field-sign" type="password" placeholder="" />
+                                    <input value={rPassword}  className="input-field-sign" type="password" placeholder="" />
                                 </div>
                             </>)
                                 :
@@ -138,15 +141,15 @@ function SignIn(props) {
                                     </div>
                                     <div className="each-input">
                                         <label className="password">Password:</label>
-                                        <input value={password} onChange={(evt) => setPassword(evt?.target?.value)} className="input-field-sign" type="password" placeholder="" />
+                                        <input value={password} onChange={(evt)=>setPassword(evt.target.value)} className="input-field-sign" type="password" placeholder="" />
                                     </div>
                                 </>)
-                                }
-                                <div className="returned-error-signin">{returnedError}</div>
+                            }
+                            <div className="returned-error-signin">{returnedError}</div>
                         </div>
                         <div className="btn-sign-wrapper">
                             <div onClick={modeControl} className="signin-green-btn">{registerMode ? "Register" : "Sign In"}</div>
-                            <div onClick={() => {setRegisterMode(!registerMode); setReturnedError("");resetValues()}} className="register-grey-btn">{registerMode ? "Sign In" : "Register"}</div>
+                            <div onClick={() => { setRegisterMode(!registerMode); setReturnedError(""); resetValues() }} className="register-grey-btn">{registerMode ? "Sign In" : "Register"}</div>
                         </div>
                     </div>
                 </div>
