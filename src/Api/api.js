@@ -142,7 +142,7 @@ class Authorize {
 
     constructor() {
         this.api = axios.create({
-            baseURL: "http://localhost:3001/", headers: {
+            baseURL: "https://portfoliocaique.click/", headers: {
                 Authorization: "Bearer chave777"
             }
         })
