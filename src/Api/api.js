@@ -1,5 +1,7 @@
 import axios from "axios";
 
+const encoder = new TextEncoder()
+
 class ApiController {
 
     constructor(userid) {
@@ -140,7 +142,7 @@ class Authorize {
 
     constructor() {
         this.api = axios.create({
-            baseURL: "https://portfoliocaique.click/", headers: {
+            baseURL: "http://localhost:3001/", headers: {
                 Authorization: "Bearer chave777"
             }
         })
@@ -156,8 +158,12 @@ class Authorize {
         user = user?.trim()?.toLowerCase()
         password = password?.trim()
 
+        let r = +String(Math.random()).substring(2,4)
+        password = encoder.encode(password).map((e)=>e-r)
+        r = String(r+117).split("").reverse().join("") // gerar uma chave no backend que dure 2 minutos para somar
+
         try {
-            const response = await this.api.post("login", { user, password })
+            const response = await this.api.post("login", { user, password, r })
 
             if (response?.status != 200) {
                 return response?.data
