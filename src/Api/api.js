@@ -23,13 +23,13 @@ class ApiController {
     async getTasksApi() {
 
         try {
-            
+
             const response = await this.api.get("tasks")
 
             return response?.data?.data
 
         } catch (err) {
-            console.log("##getTasksApi()",err)
+            console.log("##getTasksApi()", err)
             return false
         }
 
@@ -38,7 +38,7 @@ class ApiController {
     async addNewTaskApi(text) {
 
         if (!text || typeof text != 'string') {
-            console.log("##addNewTaskApi() ","text is not a string")
+            console.log("##addNewTaskApi() ", "text is not a string")
             return false
         }
 
@@ -50,7 +50,7 @@ class ApiController {
             return false
 
         } catch (err) {
-            console.log("##addNewTaskApi()",err)
+            console.log("##addNewTaskApi()", err)
             return false
         }
 
@@ -61,7 +61,7 @@ class ApiController {
         const typeOfRequest = typeof target
 
         if (typeOfRequest != 'string' && typeOfRequest != "boolean") {
-            console.log("##deleteTaskApi() ","target is not a string neither a boolean")
+            console.log("##deleteTaskApi() ", "target is not a string neither a boolean")
             return false
         }
 
@@ -79,7 +79,7 @@ class ApiController {
             return true
 
         } catch (err) {
-            console.log("##deleteTaskApi()",err)
+            console.log("##deleteTaskApi()", err)
             return false
         }
     }
@@ -102,7 +102,7 @@ class ApiController {
             return true
 
         } catch (err) {
-            console.log("##editTaskApi()",err)
+            console.log("##editTaskApi()", err)
             return false
         }
 
@@ -110,7 +110,7 @@ class ApiController {
 
     async sendMessageApi(name, email, message) {
 
-        if(![name,email,message].every((e)=>typeof e == 'string' && e)){
+        if (![name, email, message].every((e) => typeof e == 'string' && e)) {
             console.log("##sendMessageApi() - name, email or message is not a string",)
             return
         }
@@ -121,14 +121,14 @@ class ApiController {
 
         try {
 
-            const response = await this.goApi.post("message", { name:name || "anonymous", email, message })
+            const response = await this.goApi.post("message", { name: name || "anonymous", email, message })
 
             if (response?.status != 200) return false;
 
             return true
 
         } catch (err) {
-            console.log("##sendMessageApi()",err)
+            console.log("##sendMessageApi()", err)
             return false
         }
 
@@ -138,11 +138,9 @@ class ApiController {
 
 class Authorize {
 
-    //http://191.252.195.63:3001/
-
     constructor() {
         this.api = axios.create({
-            baseURL: "https://portfoliocaique.click/", headers: {
+            baseURL: "https://portfoliocaique.click/goapi/", headers: {
                 Authorization: "Bearer chave777"
             }
         })
@@ -150,7 +148,7 @@ class Authorize {
 
     async login(user, password) {
 
-        if(![user,password].every((e)=>typeof e == 'string' && e)){
+        if (![user, password].every((e) => typeof e == 'string' && e)) {
             console.log("##login() - user or password is not a string",)
             return
         }
@@ -158,9 +156,9 @@ class Authorize {
         user = user?.trim()?.toLowerCase()
         password = password?.trim()
 
-        let r = +String(Math.random()).substring(2,4)
-        password = encoder.encode(password).map((e)=>e-r)
-        r = String(r+117).split("").reverse().join("") // gerar uma chave no backend que dure 2 minutos para somar
+        let r = +String(Math.random()).substring(2, 4)
+        password = encoder.encode(password).map((e) => e - r)
+        r = String(r + 117).split("").reverse().join("") // gerar uma chave no backend que dure 2 minutos para somar
 
         try {
             const response = await this.api.post("login", { user, password, r })
@@ -179,7 +177,7 @@ class Authorize {
 
     async registerUser(user, email, password) {
 
-        if(![user,password].every((e)=>typeof e == 'string' && e)){
+        if (![user, password].every((e) => typeof e == 'string' && e)) {
             console.log("##registeUser() - user, email or password is not a string",)
             return
         }
@@ -188,8 +186,12 @@ class Authorize {
         password = password?.trim()
         email = email?.trim()?.toLowerCase()
 
+        let r = +String(Math.random()).substring(2, 4)
+        password = encoder.encode(password).map((e) => e - r)
+        r = String(r + 117).split("").reverse().join("")
+
         try {
-            const response = await this.api.post("register", { user, email, password })
+            const response = await this.api.post("register", { user, email, password, r })
 
             if (response?.status != 200) {
                 return response?.data

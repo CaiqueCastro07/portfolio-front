@@ -45,7 +45,7 @@ function SignIn(props) {
             return
         }
 
-        authorize.registerUser(user?.toLowerCase(), email?.toLowerCase(), password).then((res) => {
+        authorize.registerUser(user, email, password).then((res) => {
 
             if (res?.status != 200) {
                 setReturnedError(res?.message || "Error")
@@ -126,11 +126,11 @@ function SignIn(props) {
                                 </div>
                                 <div className="each-input">
                                     <label className="password">Password:</label>
-                                    <input value={password} className="input-field-sign" type="password" placeholder="" />
+                                    <input value={password} onChange={(evt)=>setPassword(evt?.target?.value)} className="input-field-sign" type="password" placeholder="" />
                                 </div>
                                 <div className="each-input">
                                     <label className="password">Repeat the password:</label>
-                                    <input value={rPassword}  className="input-field-sign" type="password" placeholder="" />
+                                    <input value={rPassword} onChange={(evt)=>setRPassword(evt?.target?.value)} className="input-field-sign" type="password" placeholder="" />
                                 </div>
                             </>)
                                 :

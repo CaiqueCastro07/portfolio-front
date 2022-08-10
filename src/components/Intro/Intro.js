@@ -6,7 +6,6 @@ function Intro(props) {
         props?.todoPlace?.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'start' })
     }
 
-
     return (
         <>
             <section className="intro" id="intro">
