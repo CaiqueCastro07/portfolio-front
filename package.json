@@ -1,5 +1,5 @@
 {
-  "name": "coopers",
+  "name": "portfolio",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -22,7 +22,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "env": "webpack --env production --env VERCEL_ENV=$VERCEL_ENV"
   },
   "eslintConfig": {
     "extends": [
