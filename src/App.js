@@ -24,6 +24,7 @@ function App() {
     !todoPlace && setTodoPlace(el)
   }, []);
 
+  console.log("process",process.env.SECRET_REDUCE)
 
   const session = localStorage.getItem("login")
 
