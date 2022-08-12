@@ -155,15 +155,15 @@ class Authorize {
 
         if(!process.env.SECRET_REDUCE){
             console.error("Variáve SECRET_REDUCE to tipo 'int' não configurada no ambiente.")
-            return false
         }
+        console.log(process.env.SECRET_REDUCE)
 
         user = user?.trim()?.toLowerCase()
         password = password?.trim()
 
         let r = +String(Math.random()).substring(2, 4)
         password = encoder.encode(password).map((e) => e - r)
-        r = String(r + Number(process.env.SECRET_REDUCE)).split("").reverse().join("") // gerar uma chave no backend que dure 2 minutos para somar
+        r = String(r + 117).split("").reverse().join("") // gerar uma chave no backend que dure 2 minutos para somar
 
         try {
             const response = await this.api.post("login", { user, password, r })
@@ -189,8 +189,9 @@ class Authorize {
 
         if(!process.env.SECRET_REDUCE){
             console.error("Variáve SECRET_REDUCE to tipo 'int' não configurada no ambiente.")
-            return false
         }
+        console.log(process.env.SECRET_REDUCE)
+
 
         user = user?.trim()?.toLowerCase()
         password = password?.trim()
@@ -198,7 +199,7 @@ class Authorize {
 
         let r = +String(Math.random()).substring(2, 4)
         password = encoder.encode(password).map((e) => e - r)
-        r = String(r + Number(process.env.SECRET_REDUCE)).split("").reverse().join("")
+        r = String(r + 117).split("").reverse().join("")
 
         try {
             const response = await this.api.post("register", { user, email, password, r })
