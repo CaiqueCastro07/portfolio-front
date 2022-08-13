@@ -25,8 +25,6 @@ function App() {
   }, []);
 
   console.log("process env",process.env)
-    console.log("process",process)
-
 
   const session = localStorage.getItem("login")
 
