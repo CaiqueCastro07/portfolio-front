@@ -7,24 +7,21 @@ import BlackBar from './components/BlackBar/BlackBar';
 import ToDo from './components/ToDo/ToDo';
 import ContactForm from './components/ContactForm/ContactForm';
 import ExtraIntro from './components/ExtraIntro/ExtraIntro';
-import ApiController from './Api/api';
 import SignIn from './components/SignIn/SignIn';
-import { User } from './data/data';
 import { useState, useEffect } from 'react';
 
 function App() {
 
   const [logged, setLogged] = useState(false)
   const [loginScreen, setLoginScreen] = useState(false)
-  const [todoPlace,setTodoPlace]= useState(false)
+  const [todoPlace, setTodoPlace] = useState(false)
 
   useEffect(() => {
     const el = document.getElementById('todo-place')
-
     !todoPlace && setTodoPlace(el)
   }, []);
 
-  console.log("process env",process.env)
+  console.log("process env", process.env)
 
   const session = localStorage.getItem("login")
 

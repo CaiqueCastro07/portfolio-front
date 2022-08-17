@@ -5,12 +5,12 @@ const introSlides = [
         link:"https://github.com/CaiqueCastro07/portfolio-front"
     },
     {
-        text: "To-Do List handled by a powerful NodeTS application",
+        text: "To-Do List handled by a powerful NodeTS application, tests written for every endpoint",
         image: "slide-img2.png",
         link:"https://github.com/CaiqueCastro07/portfolio-backend"
     },
     {
-        text: "Contact form handled by a Go application, your data is safe with us",
+        text: "Contact form and authentications handled by a Go application, your data is safe with us",
         image: "slide-img3.png",
         link:"https://github.com/CaiqueCastro07/portfolio-backend-go"
     }
